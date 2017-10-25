@@ -13,6 +13,8 @@ var app = express();
 //set up handlebars partials
 hbs.registerPartials(__dirname + '/views/partials');
 
+app.set('view engine', 'hbs');
+
 //Body Parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -26,3 +28,15 @@ require('/app/routing/api-routes.js')(app);
 require('/app/routing/html-routes.js')(app);
 
 
+
+
+
+
+
+
+
+
+
+app.listen(port, function() {
+    console.log(`Server is up on port ${port}`);
+});
