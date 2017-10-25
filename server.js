@@ -54,22 +54,26 @@ app.get('/survey', function (req, res) {
 
     });
 });
-//
+
 //Body Parser
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({extended: true}));
-//app.use(bodyParser.text());
-//app.use(bodyParser.json({type: 'application/vnd.api+json'}));
-//
-//
-//
-////Router
-//require('/app/routing/api-routes.js')(app);
-//require('/app/routing/html-routes.js')(app);
-//
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 
 
 
+//Router
+
+//app.get('/views/routing/api-routes.js');
+//app.get('/app/routing/html-routes.js');
+
+require('/views/routing/api-routes.js')(app);
+require('/app/routing/html-routes.js')(app);
+
+
+
+//console.log(error);
 
 
 
