@@ -1,15 +1,15 @@
-var friends = require('../data/friends.js');
+var friends = require('../app/data/friends.js');
 
 //Routes
 module.exports = function(app){
 
 	// API GET Requests
-	app.get('/api/friends', function(req, res){
+	app.get('../app/data/friends.js', function(req, res){
 		res.json(friends);
 	});
 
 	// API POST Requests
-	app.post('/api/friends', function(req, res){
+	app.post('../app/data/friends', function(req, res){
 
 //Comparing user with their best friend match 
 

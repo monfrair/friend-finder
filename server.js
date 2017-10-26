@@ -1,8 +1,9 @@
 // setting up the dependencies for the app//
 
-
+var request = require('request');
 var express = require("express");
 var bodyParser = require("body-parser");
+var fs = require("fs")
 //var express = require('express');
 //var bodyParser = require('body-parser');
 //var path = require('path');
@@ -44,8 +45,8 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 
 
 
-require("./app/routes/apiRoutes.js") (app);
-require("./app/routes/htmlRoutes.js") (app);
+require("../routing/apiRoutes") (app);
+require("../routing/htmlRoutes") (app);
 
 
 
